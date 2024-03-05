@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+:root {
+    --dark-blue-main-BG: hsl(217, 54%, 11%);
+    --dark-blue-card-BG: hsl(216, 50%, 16%);
+    --dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --soft-blue-p: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue-main-BG);
+}
+
+.card {
+    background-color: var(--dark-blue-card-BG);
+    width: 350px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.75);
+}
+
+.card .imgcube img {
+    width: 100%;
+    /* height: 300px; */
+    border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card .imgcube {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.imgcube .eye {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 31.5%;
+    opacity: 0;
+    background-color: hsl(178, 100%, 50%, 60%);
+    transition: .3s ease;
+    border-radius: 10px;
+}
+
+.imgcube .eye img {
+    width: 50px;
+    height: 50px;
+}
+
+.imgcube:hover .eye {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card .text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 10px;
+}
+
+.card .text h1 {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.card .text h1:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.card .text p {
+    color: var(--soft-blue-p);
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.card .crypto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .crypto .ETH {
+    color: var(--cyan);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.card .crypto .time {
+    color: var(--soft-blue-p);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.card .line {
+    background-color: var(--soft-blue-p);
+    height: 1px;
+    margin-top: 10px;
+}
+
+.card .avatar {
+    color: var(--soft-blue-p);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card .avatar span {
+    color: var(--white);
+}
+.card .avatar img {
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
